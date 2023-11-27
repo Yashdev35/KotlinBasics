@@ -20,6 +20,14 @@ class Human (val name : String , val age : Int) {
     }
 
 }
+fun main(){
+    var yash = Human("Yash", 19)
+    //if we called the walk and the eat method in the init block then it will be executed as soon as the class is created
+    //and no need to call it in the main method separately
+    // yash.name and yash.age are properties of the class rather than just being the information. we can modify these properties
+    // yash.age = 20 this line of code wont work because we have used val instead of var
+    print(yash.name + " " + yash.age)//we cannot do this when name and age are just parameters
+}
 // in kotlin constructors work very differently than in java
 //in java constructor are created by using the class name and then the constructor name, but here we have constructor keyword
 //data classes in kotlin are like abstract classes in java, they are used to store data and are not used to create objects
